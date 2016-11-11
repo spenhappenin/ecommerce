@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'materialize-sass'
 
 group :development, :test do
-gem 'pry'
+gem 'pry', '~> 0.10.4'
 end
 
 group :development do
