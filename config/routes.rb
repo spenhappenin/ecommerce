@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
 root 'store#index'
 
 get '/about', to: 'shared#about', as: 'about'
