@@ -5,7 +5,7 @@
   <ul>
     <%= @departments.each do |department| %>
         <%= link_to 'Edit', edit_store_department_path(@store, department) %>
-        <%= link_to 'Delete', store_deaprtment_path(@store, department),
+        <%= link_to 'Delete', store_department_path(@store, department),
           method: :delete, data: {confirm: 'Really Delete?'} %>
     <% end %>
   <% else %>
