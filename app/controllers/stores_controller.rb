@@ -27,7 +27,7 @@ class StoresController < ApplicationController
 
   def update 
   	if @store.update(store_params)
-  		redirect_to store_path(@store)
+  		redirect_to store_departments_path(@store)
   	end
   end
 

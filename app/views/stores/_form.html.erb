@@ -1,17 +1,17 @@
-    <%= form_for @store do |f| %>
-    <div class='col m6'>
-      <%= f.label :name %>
-      <%= f.text_field :name, required: true %>
-    </div>
-    <div class='col m6'>
-      <%= f.label :owner %>
-      <%= f.text_field :owner %>
-    </div>
-    <div class='col m6'>
-      <%= f.label :location %>
-      <%= f.text_field :location %>
-    </div>
-    <div class='center'>
-      <%= f.submit class: 'btn blue darken-4 white-text' %>
-      <% end %>
-    </div>
+<%= form_for @store do |f| %>
+  <div class='col m6'>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
+  </div>
+  <div class='col m6'>
+    <%= f.label :owner %>
+    <%= f.text_field :owner %>
+  </div>
+  <div class='col m6'>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+  <div class='center'>
+    <%= f.submit class: 'btn form-button' %>
+  </div>
+<% end %>
