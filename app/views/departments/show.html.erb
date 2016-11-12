@@ -1,2 +1,9 @@
-<h1>Departments#show</h1>
-<p>Find me in app/views/departments/show.html.erb</p>
+<h1> <%= @department.name %> </h1>
+<hr />
+
+<div>
+  <% if @department.phone_number %>
+    <p>Phone Number: <%= @department.phone_number %> </p>
+  <% end %>
+
+  <%= link_to '@department.name products', department_products_path(@department) %>
