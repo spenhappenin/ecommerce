@@ -1,5 +1,76 @@
+/*@import "materialize/components/color";*/
 @import 'materialize';
 @import 'shared';
 @import 'stores';
 @import 'departments';
 @import 'products';
+
+
+.body-color {
+	background-color: #fff !important;
+}
+
+
+
+  /* --------  N A V  -------- */
+
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	background-color: #313139;
+}
+
+nav .logo {
+	margin-left: 20px;
+}
+
+nav h3 {
+	color: #a0abb7 !important;
+	font-weight: bold;
+	font-family: 'Audiowide', cursive;
+}
+
+nav .nav-links {
+	margin-right: 20px;
+}
+
+nav ul li a {
+	color: #efefef;
+}
+
+
+/* ------- S T O R E S ------- */
+
+
+.stores {
+	background-color: #cf4857 !important;
+	/*background-color: #16a89e !important;*/
+	/*background-color: #81628b !important;*/
+	/*background-color: #f5ac43 !important;*/
+	/*background-color: #f7624a !important;*/
+} 
+
+.stores .card-action{
+	/*background-color: #cf4857 !important;*/
+	/*background-color: #16a89e !important;*/
+	/*background-color: #81628b !important;*/
+	/*background-color: #f5ac43 !important;*/
+	/*background-color: !important;*/
+}
+
+.stores a {
+	color: #fff !important;
+}
+
+.new_store_button a {
+	background-color: #313139;
+}
+
+.new_store_button a:hover {
+	background-color: #313139;
+}
+
+
+
+
