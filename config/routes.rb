@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-
-root 'store#index'
+root 'shared#home'
 
 get '/about', to: 'shared#about', as: 'about'
 get '/cart', to: 'cart#index', as: 'cart'
+get '/contact', to: 'shared#contact', as: 'contact'
+
 
 resources :cart
 
