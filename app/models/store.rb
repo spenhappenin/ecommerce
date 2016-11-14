@@ -1,4 +1,5 @@
 class Store < ApplicationRecord
+	belongs_to :user
   has_many :departments, dependent: :destroy
 
   validates :name, :owner, :location, :color, presence: true

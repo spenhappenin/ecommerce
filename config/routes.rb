@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'home/index'
 
   devise_for :users
-  root 'shared#home'
+  root 'stores#index'
 
   get '/about', to: 'shared#about', as: 'about'
   get '/cart', to: 'cart#show', as: 'cart'
@@ -20,3 +20,4 @@ Rails.application.routes.draw do
     resources :products
   end
 end
+

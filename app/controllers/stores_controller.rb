@@ -2,7 +2,7 @@ class StoresController < ApplicationController
 	before_action :set_store, except: [:index, :new, :create]
 
   def index
-  	@stores = Store.all
+  	@stores = current_user.stores
   end
 
   def show
@@ -10,11 +10,11 @@ class StoresController < ApplicationController
   end
 
   def new
-  	@store = Store.new
+  	@store = current_user.stores.new
   end
 
   def create
-  	@store = Store.new(store_params)
+  	@store = current_user.stores.new(store_params)
   	if @store.save
 
   		redirect_to store_departments_path(@store)
@@ -47,7 +47,7 @@ class StoresController < ApplicationController
   end
 
   def set_store
-  	@store = Store.find(params[:id])
+  	@store = current_user.store.find(params[:id])
   end
 
 end
