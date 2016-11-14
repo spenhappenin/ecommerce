@@ -5,6 +5,9 @@
 @import 'departments';
 @import 'products';
 
+* {
+	/*border: 1px solid red;*/
+}
 
 .body-color {
 	background-color: #fff !important;
@@ -38,17 +41,51 @@ nav ul li a {
 	color: #efefef;
 }
 
+.cart-icon {
+	padding-top: 4px;
+}
+
 
 /* ------- S T O R E S ------- */
 
 
+.profile_color_red {
+	/*background-color: #cf4857 !important;*/
+}
+
+.profile_color_blue {
+	/*background-color: #1c6a81 !important;*/
+}
+
+.profile_color_green {
+	/*background-color: #16a89e !important;*/
+}
+
+.profile_color_orange {
+	/*background-color: #f7624a !important;*/
+}
+
+.profile_color_yellow {
+	/*background-color: #f5ac43 !important;*/
+}
+
+.profile_color_purple {
+	/*background-color: #81628b !important;*/
+}
+
+.profile_color_pink {
+	/*background-color: #dd557b !important;*/
+}
+
 .stores {
 	/*background-color: #cf4857 !important;*/
 	/*background-color: #16a89e !important;*/
-	background-color: #81628b !important;
+	/*background-color: #81628b !important;*/
 	/*background-color: #f5ac43 !important;*/
 	/*background-color: #f7624a !important;*/
-	border: 1px solid black;
+	/*background-color: #1c6a81 !important;*/
+	/*background-color: #dd557b !important;*/
+	/*border: 1px solid black;*/
 } 
 
 .stores .card-action{

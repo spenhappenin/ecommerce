@@ -11,6 +11,14 @@
     <%= f.label :location %>
     <%= f.text_field :location %>
   </div>
+   <div class='input-field col m6'>
+    <%= f.label :color %>
+      <br />
+      <br />
+    <%= f.select :color, ['blue', 'red', 'green', 'orange', 'yellow', 'purple', 'pink'] %>
+  </div>
+    <br />
+ 
   <div class='center'>
     <%= f.submit class: 'btn form-button' %>
   </div>

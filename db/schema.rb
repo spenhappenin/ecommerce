@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20161111233725) do
     t.string   "name"
     t.string   "owner"
     t.string   "location"
+    t.string   "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

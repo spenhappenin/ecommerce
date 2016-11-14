@@ -17,6 +17,7 @@ class StoresController < ApplicationController
   	@store = Store.new(store_params)
   	if @store.save
   		redirect_to store_departments_path(@store)
+      
   	else
   		render :new
   	end
@@ -40,7 +41,7 @@ class StoresController < ApplicationController
   private 
 
   def store_params
-  	params.require(:store).permit(:name, :owner, :location)
+  	params.require(:store).permit(:name, :owner, :location, :color)
   end
 
   def set_store

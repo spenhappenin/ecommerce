@@ -2,10 +2,32 @@
 	<h1>List of Stores:</h1>
 	<br />
 	
+
+
+
 	<div class="row">
   		<% @stores.each do |store| %>
 		  	<div class="col s12 m6">
-		    	<div class="card stores center">
+
+
+			<% if store.color = 'red' %>
+				<% profile_color = 'red' %>
+			<% elsif store.color = 'blue' %>
+				<% profile_color = 'blue' %>
+			<% elsif store.color = 'green' %>
+				<% profile_color = 'green' %>
+			<% elsif store.color = 'orange' %>
+				<% profile_color = 'orange' %>
+			<% elsif store.color = 'yellow' %>
+				<% profile_color = 'yellow' %>
+			<% elsif store.color = 'purple' %>
+				<% profile_color = 'purple' %>
+			<% elsif store.color = 'pink' %>
+				<% profile_color = 'pink' %>
+			<% end %>
+
+
+		    	<div class="card <%= profile_color %> center">
 		    		<div class="card-content white-text">
 						<span class="card-title"> <%= store.name %> </span>
 	        			<h6>Owner: <%= store.owner %> </h6>
