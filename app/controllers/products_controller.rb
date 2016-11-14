@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   def index
     @products = @department.products
     # @cart = Cart.find(params[:cart_id])
+
   end
 
   def show
@@ -51,6 +52,8 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:name, :price, :details, :image)
   end
+
+
 
   def set_department
     @department = Department.find(params[:department_id])

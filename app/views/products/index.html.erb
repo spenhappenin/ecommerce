@@ -1,6 +1,6 @@
 <h1 class="center"><%= @department.name %></h1>
-<hr>
-<% if @products.any? %>
+
+<!-- <% if @products.any? %>
   <ul class="collection container">
     <% @products.each do |product| %>
     <li class="collection-item avatar">
@@ -15,10 +15,33 @@
   </ul>
 <% else %>
     <h4>No products have been created for <%= @department.name %>. Please add some.</h4>
-<% end %>
+<% end %> -->
 <br>
 <div class="center col s12">
   <%= link_to 'Add Product', new_department_product_path(@department), class: 'btn blue' %>
+  <%= link_to 'Back to Departments', store_departments_path(@department.store_id), class: 'btn blue'%>
 </div>
 
 <hr>
+<div class="row">
+  <% @products.each do |product| %>
+    <div class="card col s4 offset-s1">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="<%= product.image.url(:medium) %>">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4"><%= link_to product.name, department_product_path(@department, product) %><i class="material-icons right"></i></span>
+        <br>
+        <p>$<%= product.price %>.00 <br>
+           <%= truncate(product.details, length: 30) %>
+        </p>
+        <br>
+        <p><%= link_to 'Add To Cart', add_cart_product_path(product), method: :post %></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4"><%= link_to product.name, department_product_path(@department, product) %><i class="material-icons right">close</i></span>
+        <p><%= product.details %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
