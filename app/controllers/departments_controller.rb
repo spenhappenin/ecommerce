@@ -6,9 +6,6 @@ class DepartmentsController < ApplicationController
     @departments = @store.departments
   end
 
-  def show
-  end
-
   def new
     @department = @store.departments.new
   end
@@ -16,7 +13,7 @@ class DepartmentsController < ApplicationController
   def create
     @department = @store.departments.new(department_params)
     if @department.save
-      redirect_to store_department_path(@store, @department)
+      redirect_to store_departments_path(@store)
     else
       render :new
     end
@@ -27,7 +24,7 @@ class DepartmentsController < ApplicationController
 
   def update
     if @department.update(department_params)
-      redirect_to store_department_path(@store, @department)
+      redirect_to store_departments_path(@store)
     else
       render :edit
     end
