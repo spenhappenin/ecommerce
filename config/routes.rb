@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
+  devise_for :users
   root 'shared#home'
 
   get '/about', to: 'shared#about', as: 'about'

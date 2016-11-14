@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'materialize-sass'
+gem 'devise', '~> 4.2.0'
 
 group :development, :test do
 gem 'pry', '~> 0.10.4'

@@ -1,6 +1,6 @@
 <nav class='valign-wrapper'>
 	<div class='logo'>
-		<h3 class='logo-font left'>E-Shops</h3>	
+		<h3 class='logo-font left'>E-Shops</h3>
 	</div>
 	<div class='nav-links'>
 	  <ul class='right'>
@@ -8,8 +8,10 @@
 	    <li> <%= link_to 'About', about_path, class: 'nav-link-c' %> </li>
 	    <li> <a href='/contact'> Contact </a> </li>
 	    <li> <a href='/stores'> Stores </a> </li>
+			<% if user_signed_in? %>
 	    <li> <a href='/cart'> <i class="material-icons cart-icon">shopping_cart</i> </a> </li>
+				<li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+			<% end %>
 	  </ul>
 	</div>
 </nav>
-
