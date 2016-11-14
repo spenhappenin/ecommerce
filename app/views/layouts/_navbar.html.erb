@@ -9,6 +9,8 @@
 	    <li> <a href='/contact'> Contact </a> </li>
 	    <li> <a href='/stores'> Stores </a> </li>
 			<% if user_signed_in? %>
+	    <li> <%= link_to 'Contact', contact_path, class: 'nav-link-c' %> </li>
+	    <li> <%= link_to 'Stores', stores_path, class: 'nav-link-c' %> </li>
 	    <li> <a href='/cart'> <i class="material-icons cart-icon">shopping_cart</i> </a> </li>
 				<li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
 			<% end %>

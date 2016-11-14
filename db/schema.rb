@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20161114220446) do
     t.string   "color"
   end
 
+
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -72,6 +73,8 @@ ActiveRecord::Schema.define(version: 20161114220446) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+
+>>>>>>> update
   add_foreign_key "departments", "stores"
   add_foreign_key "products", "departments"
 end
