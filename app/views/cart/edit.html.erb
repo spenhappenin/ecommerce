@@ -1,2 +1,21 @@
-<h1>Cart#edit</h1>
-<p>Find me in app/views/cart/edit.html.erb</p>
+
+<!-- <% if @products.any? %>
+  <ul class="collection container">
+    <% @products.each do |product| %>
+    <li class="collection-item avatar">
+      <img src="<%= product.image.url(:thumb) %>" alt="" class="circle">
+      <span class="title"><%= link_to product.name, department_product_path(@department, product) %></span>
+      <p>$<%= product.price %>.00 <br>
+         <%= truncate(product.details, length: 30) %>
+      </p>
+      <%= link_to 'Add to Cart', add_cart_product_path(@cart, product), method: :post %>
+    </li>
+    <% end %>
+  </ul>
+<% else %>
+    <h4>No products have been created for <%= @department.name %>. Please add some.</h4>
+<% end %>
+<br>
+<div class="center col s12">
+  <%= link_to 'Add Product', new_department_product_path(@department), class: 'btn blue' %>
+</div> -->

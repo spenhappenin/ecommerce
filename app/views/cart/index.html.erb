@@ -1,2 +1,9 @@
-<h1>Cart#index</h1>
-<p>Find me in app/views/cart/index.html.erb</p>
+<% if @carts.any? %>
+  <% @carts.each do |cart| %>
+    <% cart.name %>
+  <% end %>
+
+<% else %>
+  <h3>Add a Cart</h3>
+  <%= link_to "Add Cart", new_cart_path class: 'btn' %>
+<% end %>

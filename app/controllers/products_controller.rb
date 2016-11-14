@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
   before_action :set_product, except: [:index, :new, :create]
   def index
     @products = @department.products
+    # @cart = Cart.find(params[:cart_id])
   end
 
   def show
@@ -25,7 +26,7 @@ class ProductsController < ApplicationController
   end
 
   def update
-    if @product.update
+    if @product.update(product_params)
       redirect_to department_product_path(@department, @product)
     else
       render :edit
@@ -37,9 +38,18 @@ class ProductsController < ApplicationController
     redirect_to department_products_path(@department)
   end
 
+  # def new_product
+  # @products = Products.all
+  # end
+  #
+  # def add_product
+  #   @cart.products << Product.find(params[:product_id])
+  #   redirect_to cart_path(@cart)
+  # end
+
   private
   def product_params
-    params.require(:product).permit(:name, :price, :details)
+    params.require(:product).permit(:name, :price, :details, :image)
   end
 
   def set_department

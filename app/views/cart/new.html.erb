@@ -1,2 +1,6 @@
-<h1>Cart#new</h1>
-<p>Find me in app/views/cart/new.html.erb</p>
+<%= form_for @cart do |f| %>
+  <h3>Create Cart</h3>
+  <div class="center col s12">
+  <%= f.submit class: "btn black white-text" %>
+  </div>
+<% end %>

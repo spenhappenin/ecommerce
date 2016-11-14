@@ -1,2 +1,26 @@
-<h1>Products#new</h1>
-<p>Find me in app/views/products/new.html.erb</p>
+<h1 class="center">Add Product</h1>
+<hr>
+<div class='row'>
+  <%= form_for [@department, @product], html: { multipart: true } do |f| %>
+    <div class="col s12 m6 offset-m3">
+      <%= f.label :name %>
+      <%= f.text_field :name, required: true %>
+    </div>
+    <div class="col s12 m6 offset-m3">
+      <%= f.label :price %>
+      <%= f.number_field :price %>
+    </div>
+    <div class="col s12 m6 offset-m3">
+      <%= f.label :details %>
+      <%= f.text_area :details %>
+    </div>
+    <br>
+    <div class="col s12 m6 offset-m3">
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+    </div>
+    <div class="center col s12">
+    <%= f.submit class: "btn blue" %>
+    </div>
+  <% end %>
+</div>
