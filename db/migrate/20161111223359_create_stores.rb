@@ -4,7 +4,6 @@ class CreateStores < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :owner
       t.string :location
-      t.string :color
 
       t.timestamps
     end

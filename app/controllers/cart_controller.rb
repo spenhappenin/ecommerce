@@ -2,14 +2,24 @@ class CartController < ApplicationController
   before_action :set_cart
 
   def show
+    @products = @cart.products
   end
 
   def add_product
-    @cart.products << Product.find(params[:product_id])
+    product = Product.find(params[:product_id])
+    @cart.products << product
+    flash[:success] = 'Product Added To Cart!'
+    redirect_to department_products_path(product.department)
+  end
+
+  def remove_product
+    # find the product by the ID
+    # figure out how to delete the product from the carts products - cart.products []
+    # redirect_to department_products_path
   end
 
   private
     def set_cart
-      @cart = Cart.first
+      @cart = Cart.first || Cart.create
     end
 end

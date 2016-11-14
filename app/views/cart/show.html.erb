@@ -1,9 +1,11 @@
-<% if @carts.any? %>
-  <% @products.each do |product| %>
-    <% product.name %>
-  <% end %>
-
+<% if @products.any? %>
+  <ul>
+    <% @products.each do |product| %>
+      <li>
+        <%= link_to product.name, department_product_path(product.department, product) %>
+      </li>
+    <% end %>
+  </ul>
 <% else %>
-  <h3>Add a Cart</h3>
-  <%= link_to "Add Cart", new_cart_path class: 'btn' %>
+  <h3> No products in cart, go shopping!</h3>
 <% end %>

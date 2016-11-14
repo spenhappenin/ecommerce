@@ -9,7 +9,7 @@
       <p>$<%= product.price %>.00 <br>
          <%= truncate(product.details, length: 30) %>
       </p>
-      <%= link_to 'Add To Cart', add_cart_product(product), method: :post %>
+      <%= link_to 'Add To Cart', add_cart_product_path(product), method: :post %>
     </li>
     <% end %>
   </ul>
