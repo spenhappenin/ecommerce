@@ -3,19 +3,21 @@
 <hr />
 
 <% if @departments.any? %>
-  <ul>
+  <ul class="collapsible" data-collapsible="accordion">
     <% @departments.each do |department| %>
-      <%= link_to department.name, department_products_path(department) %>
-        <%= link_to 'Edit', edit_store_department_path(@store, department) %>
-        <%= link_to 'Delete', store_department_path(@store, department),
-          method: :delete, data: {confirm: 'Really Delete?'} %>
-          <br />
+      <li>
+        <div class="collapsible-header"><%= link_to department.name, department_products_path(department) %></div>
+        <div class="collapsible-body">
+          <p> Phone Number: <%= department.phone_number %>
+            <%= link_to 'Edit', edit_store_department_path(@store, department) %>
+            <%= link_to 'Delete', store_department_path(@store, department),
+              method: :delete, data: {confirm: 'Really Delete?'} %>
+      </li>
     <% end %>
   <% else %>
     <h4> No Departments Found, Please Create One. </h4>
   </ul>
 <% end %>
-  <br />
-
+    <br />
 
 <%= link_to 'Add Department', new_store_department_path(@store) %>
