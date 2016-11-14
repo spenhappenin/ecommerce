@@ -13,10 +13,10 @@
 	        			<h6>Location: <%= store.location %> </h6>
 		    		</div>
 		    		<div class="card-action" >
-		    			<%= link_to 'Visit Store', store_departments_path(store) %>
-		    			<%= link_to 'Edit', edit_store_path(store) %>
+		    			<%= link_to 'Visit Store', store_departments_path(store), class: 'white-text' %>
+		    			<%= link_to 'Edit', edit_store_path(store), class: 'white-text'  %>
     	    			<%= link_to 'Delete', store_path(store), method: :delete,
-    	    				 data: {confirm: 'Really Delete?'} %>
+    	    				 data: {confirm: 'Really Delete?'}, class: 'white-text'  %>
 		    		</div>
 		    	</div>
 		  	</div>
