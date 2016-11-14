@@ -18,6 +18,7 @@
     <h4> No Departments Found, Please Create One. </h4>
   </ul>
 <% end %>
-    <br />
 
-<%= link_to 'Add Department', new_store_department_path(@store) %>
+<div class='center'>
+<%= link_to 'Add Department', new_store_department_path(@store), class: 'btn grey darken-4' %>
+</div>
