@@ -25,7 +25,7 @@ class StoresController < ApplicationController
 
   def edit
 		if current_user.id != @store.user_id
-			flash[:error] = "That Isn't Yours To Change!"
+			flash[:error] = "That Isn't YoursTo Change!"
 			redirect_to all_stores_path
 		end
   end

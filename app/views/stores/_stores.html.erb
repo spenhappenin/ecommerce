@@ -9,9 +9,12 @@
           </div>
           <div class="card-action" >
             <%= link_to 'Visit Store', store_departments_path(store), class: 'white-text' %>
-            <%= link_to 'Edit', edit_store_path(store), class: 'white-text'  %>
+
+            <% if current_user.id == store.user_id %>
+              <%= link_to 'Edit', edit_store_path(store), class: 'white-text'  %>
               <%= link_to 'Delete', store_path(store), method: :delete,
                  data: {confirm: 'Really Delete?'}, class: 'white-text'  %>
+            <% end %>
           </div>
         </div>
       </div>
