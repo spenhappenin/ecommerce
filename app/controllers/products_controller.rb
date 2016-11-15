@@ -17,8 +17,10 @@ class ProductsController < ApplicationController
   def create
     @product = @department.products.new(product_params)
     if @product.save
+      flash[:success] = 'Product Created Successfully!'
       redirect_to department_product_path(@department, @product)
     else
+      flash[:error] = 'Something Went Wrong!'
       render :new
     end
   end
@@ -28,9 +30,10 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      redirect_to department_product_path(@department, @product)
+      redirect_to department_product_path(@department, @product),
+      success: 'Product Updated Successfully'
     else
-      render :edit
+      render :edit,  error: 'Something Went Wrong!'
     end
   end
 
