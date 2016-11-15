@@ -8,11 +8,12 @@
     <h4>Price: <small>$<%= @product.price %>.00</small></h4>
     <h4>Details: <i><small><%= @product.details %></small></i></h4>
   </div>
+  <br>
+  <div class="col s12 center">
+    <br><br><br>
+    <%= link_to "Back To Products", department_products_path(@department), class: 'btn blue' %>
+    <%= link_to "Edit", edit_department_product_path(@department, @product), class: 'btn blue' %>
+  </div>
+</div>
 
-<br>
-<div class="col s12 center">
-  <br><br><br>
-<%= link_to "Back To Products", department_products_path(@department), class: 'btn blue' %>
-<%= link_to "Edit", edit_department_product_path(@department, @product), class: 'btn blue' %>
-</div>
-</div>
+<hr>

@@ -14,7 +14,16 @@
       </li>
       <% end %>
     </ul>
+    <div class="container">
+      <% @products.each do |product| %>
+        <% product.price %>
+        <% end %>
+      <h4 class="right"><i>Cart Total: $<%= @products.sum(&:price).to_f %>0</i></h4>
+    </div>
+    <br>
+    <br>
   <% else %>
-      <h3> No products in cart, go shopping!</h3>
+      <h3 class="center"> No products in cart, go shopping!</h3>
   <% end %>
 </div>
+<br>
