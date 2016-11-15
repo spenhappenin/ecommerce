@@ -2,7 +2,7 @@
 <div>
   <br>
   <% if @products.any? %>
-    <ul class="collection container">
+    <ul class="collection container border">
       <% @products.each do |product| %>
       <li class="collection-item avatar">
         <img src="<%= product.image.url(:thumb) %>" alt="" class="circle">
@@ -10,7 +10,7 @@
         <p>$<%= product.price %>.00 <br>
            <%= truncate(product.details, length: 30) %>
         </p>
-        <p><%= link_to 'Remove From Cart', remove_cart_product_path(product), method: :delete %></p>
+        <i><%= link_to 'Remove', remove_cart_product_path(product), method: :delete, class: "secondary-content " %></i>
       </li>
       <% end %>
     </ul>
