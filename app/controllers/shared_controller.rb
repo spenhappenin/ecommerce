@@ -1,4 +1,6 @@
 class SharedController < ApplicationController
+  skip_before_action :authenticate_user!
+
   def home
   end
 
@@ -7,5 +9,5 @@ class SharedController < ApplicationController
 
   def contact
   end
-  
+
 end
