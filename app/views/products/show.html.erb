@@ -1,19 +1,31 @@
 <h2 class="center"><%= @department.name %></h2>
-<hr>
-<div class="container row">
-  <div class="col s6 productimage">
-    <%= image_tag @product.image.url(:medium) %>
-  </div>
-  <div class="col s6 pricedescription">
-    <h4>Price: <small>$<%= @product.price %>.00</small></h4>
-    <h4>Details: <i><small><%= @product.details %></small></i></h4>
-  </div>
-  <br>
-  <div class="col s12 center">
-    <br><br><br>
-    <%= link_to "Back To Products", department_products_path(@department), class: 'btn blue' %>
-    <%= link_to "Edit", edit_department_product_path(@department, @product), class: 'btn blue' %>
-  </div>
-</div>
 
 <hr>
+<div class="row">
+    <div class="card col s4 offset-s1 bgcolor">
+      <div class="card-image">
+        <img src="<%= @product.image.url(:large) %>">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title"><h4><%= @product.name %></h4></span>
+            <h5>$<%= @product.price %>.00</h5>
+            <p><%= @product.details %></p>
+          </div>
+          <div class="card-action">
+            <p class="center"><%= link_to 'Add To Cart', add_cart_product_path(@product), method: :post %></p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 center">
+      <br><br><br>
+      <%= link_to "Back To Products", department_products_path(@department), class: 'btn blue' %>
+      <%= link_to "Edit", edit_department_product_path(@department, @product), class: 'btn blue' %>
+    </div>
+</div>
+  <hr>
