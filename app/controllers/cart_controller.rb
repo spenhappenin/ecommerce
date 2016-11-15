@@ -16,6 +16,9 @@ class CartController < ApplicationController
     # find the product by the ID
     # figure out how to delete the product from the carts products - cart.products []
     # redirect_to department_products_path
+    product = Product.find(params[:product_id])
+    @cart.products.delete(product)
+    redirect_to cart_path(@cart)
   end
 
   private
