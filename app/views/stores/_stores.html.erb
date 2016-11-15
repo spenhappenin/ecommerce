@@ -6,6 +6,7 @@
           <span class="card-title"> <%= store.name %> </span>
               <h6>Owner: <%= store.owner %> </h6>
               <h6>Location: <%= store.location %> </h6>
+              <h6>Departments: <%= store.departments.size %> </h6>
           </div>
           <div class="card-action" >
             <%= link_to 'Visit Store', store_departments_path(store), class: 'white-text' %>
