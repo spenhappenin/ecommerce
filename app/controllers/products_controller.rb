@@ -1,10 +1,10 @@
 class ProductsController < ApplicationController
   before_action :set_department
   before_action :set_product, except: [:index, :new, :create]
+
   def index
     @products = @department.products
     # @cart = Cart.find(params[:cart_id])
-
   end
 
   def show

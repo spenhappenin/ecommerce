@@ -58,6 +58,6 @@ class StoresController < ApplicationController
 	  end
 
 		def set_store
-	  	@store = current_user.stores.find(params[:id])
+	  	@store = Store.find(params[:id])
 	  end
 end
