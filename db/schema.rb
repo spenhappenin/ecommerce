@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20161116215219) do
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   create_table "departments", force: :cascade do |t|
@@ -41,7 +42,16 @@ ActiveRecord::Schema.define(version: 20161116215219) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "product_id"
     t.index ["department_id"], name: "index_products_on_department_id", using: :btree
+    t.index ["product_id"], name: "index_products_on_product_id", using: :btree
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string   "comment"
+    t.string   "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "stores", force: :cascade do |t|
@@ -80,4 +90,5 @@ ActiveRecord::Schema.define(version: 20161116215219) do
 
   add_foreign_key "departments", "stores"
   add_foreign_key "products", "departments"
+  add_foreign_key "products", "products"
 end
