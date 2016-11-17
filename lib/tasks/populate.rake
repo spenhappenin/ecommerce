@@ -22,16 +22,4 @@ namespace :populate do
   	puts 'Ecommerce Data Populated'
   end
 
-
-  # desc "Populate 10 Random Stores"
-  # task stores: :environment do
-  # 	Store.populate(10) do |store|
-  # 	  store.name = 
-  # 	  store.owner = 
-  # 	  store.location = 
-  # 	  store.color = ['red', 'blue', 'green', 'purple', 'pink', 'orange']
-  # 	end
-  # 	puts '50 Users Populated'
-  # end
-
 end

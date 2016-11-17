@@ -121,14 +121,14 @@ nav ul li a {
 	border: 1px solid black;
 }
 
-
-
-
-
-
-
-
-
+.facebook-btn {
+	background-image: url(asset_path('facebook'));
+	width: 200px;
+	height: 100px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
 
 
 .pricedescription {
