@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  after_create :send_signup_email
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -13,6 +14,9 @@ class User < ApplicationRecord
     	end
     end
 
+    def send_signup_email
+      # SignupMailer.new_signup(user).
+    end
 
   has_many :stores
 end
