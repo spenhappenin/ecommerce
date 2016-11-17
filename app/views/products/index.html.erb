@@ -25,12 +25,12 @@
 <hr>
 <div class="row">
   <% @products.each do |product| %>
-    <div class="card col s4 offset-s1">
+    <div class="card col s4 offset-s1 size">
       <div class="card-image waves-effect waves-block waves-light">
         <img class="activator" src="<%= product.image.url(:large) %>">
       </div>
       <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4"><%= link_to product.name, department_product_path(@department, product) %><i class="material-icons right"></i></span>
+        <span class="card-title activator grey-text text-darken-4"><%= link_to product.name, department_product_path(@department, product), class: 'font-size' %><i class="material-icons right"></i></span>
         <br>
         <p>$<%= product.price %>.00 <br>
            <%= truncate(product.details, length: 30) %>
