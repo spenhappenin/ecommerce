@@ -21,6 +21,8 @@ gem 'omniauth-facebook'
 group :development, :test do
 gem 'pry', '~> 0.10.4'
 gem 'dotenv-rails'
+gem 'faker'
+gem 'populator'
 end
 
 group :development do
