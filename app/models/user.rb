@@ -18,5 +18,9 @@ class User < ApplicationRecord
       # SignupMailer.new_signup(user).
     end
 
+    def full_name
+      "#{first_name} #{last_name}"
+    end
+
   has_many :stores
 end
