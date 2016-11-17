@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   # Custom Routes To Add Songs To A Billboard
   post 'add_cart_product/:product_id', to: 'cart#add_product', as: 'add_cart_product'
   delete 'remove_cart_product/:product_id', to: 'cart#remove_product', as: 'remove_cart_product'
+  post 'clear_cart_product/', to: 'cart#clear_cart', as: 'clear_cart_product'
 
   resources :stores do
     resources :departments

@@ -21,6 +21,11 @@ class CartController < ApplicationController
     redirect_to cart_path(@cart)
   end
 
+  def clear_cart
+    @cart.products = []
+    redirect_to cart_path(@cart)
+  end
+
   private
     def set_cart
       @cart = Cart.first || Cart.create
