@@ -6,6 +6,30 @@
 @import 'products';
 @import 'app';
 
+
+
+/*----- S T Y L E S -----*/
+
+
+
+.head-font {
+	font-family: 'Audiowide', cursive;
+}
+
+.links {
+	color: #313139;
+}
+
+.links:hover {
+	color: #1A00B6;
+}
+
+
+
+/*----- B O D Y -----*/
+
+
+
 * {
 	/*border: 1px solid red;*/
 }
@@ -65,36 +89,10 @@ nav ul li a {
 }
 
 
+
 /* ------- S T O R E S ------- */
 
 
-.profile_color_red {
-	/*background-color: #cf4857 !important;*/
-}
-
-.profile_color_blue {
-	/*background-color: #1c6a81 !important;*/
-}
-
-.profile_color_green {
-	/*background-color: #16a89e !important;*/
-}
-
-.profile_color_orange {
-	/*background-color: #f7624a !important;*/
-}
-
-.profile_color_yellow {
-	/*background-color: #f5ac43 !important;*/
-}
-
-.profile_color_purple {
-	/*background-color: #81628b !important;*/
-}
-
-.profile_color_pink {
-	/*background-color: #dd557b !important;*/
-}
 
 .stores a {
 	color: #fff !important;
@@ -150,3 +148,26 @@ body {
 	border: 2px solid black;
 
 }
+
+
+
+.label-color {
+	/*background-color: red !important;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

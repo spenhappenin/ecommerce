@@ -1,10 +1,10 @@
 <div class='container'>
-<h2>Log in</h2>
+<h2 class='head-font'>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
+  <div class="field labe">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, class: 'label-color ' %>
   </div>
 
   <div class="field">
@@ -20,7 +20,7 @@
   <% end -%>
 
   <div class="actions">
-    <%= f.submit "Log in", class: 'btn blue-grey darken-4' %>
+    <%= f.submit "Log in", class: 'btn blue-grey darken-4 head-font' %>
   </div>
 <% end %>
 
