@@ -19,11 +19,7 @@
         <% product.price %>
         <% end %>
       <h4 class="right"><i>Cart Total: $<%= @products.sum(&:price).to_f %>0</i></h4>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+      <br><br><br><br><br>
       <div class="center">
 
         <%= link_to 'Clear Cart', clear_cart_product_path(@product), method: :post, class: 'btn blue' %>
